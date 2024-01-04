@@ -1,0 +1,88 @@
+/*CSS Geral*/
+
+/*Gradiente do fundo (utilizar sempre no elemento main)*/
+.fundo {
+    background: linear-gradient(123deg, #FFECB3 0%, #FFFFFF 67%, #f8dca6 72%), linear-gradient(180deg, #FFD480 0%, #FFD480 100%), linear-gradient(142deg, #FFEEC9 0%, #FFEEC9 33%, #FFECB3 calc(33% + 1px), #FFECB3 56%, #FFECB3 calc(56% + 1px), #FFECB3 62%, #FFECB3 calc(62% + 1px), #FFECB3 100%);
+    background-blend-mode: multiply, overlay, normal;
+}
+
+
+/*Barra de Navegação*/
+.navbar {
+    background-color: #f8dca6;
+    padding-bottom: 20px;
+}
+
+/*Rodapé*/
+.rodape {
+    background-color: #f8dca6;
+}
+
+.fade-in {
+    opacity: 0;
+    /* Começa invisível */
+    animation: fadeInAnimation 2s ease-in-out forwards;
+    /* Aplica a animação */
+}
+
+/*Animação de fade na logo do banner e títulos*/
+@keyframes fadeInAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/*------------------------------------------------------------------------*/
+
+/*Tela de Início*/
+
+/*Banner*/
+
+.banner {
+    position: relative;
+    display: flex;
+}
+
+.logo-banner {
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+
+.margem {
+    margin: 100px;
+}
+
+
+/*------------------------------------------------------------------------*/
+
+/*Tela de Contato*/
+
+/*Mapa*/
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    padding-bottom: 56.25%;
+    /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+}
+
+.iframe-container>* {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
